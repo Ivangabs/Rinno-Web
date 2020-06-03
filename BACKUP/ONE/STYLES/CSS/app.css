@@ -1,0 +1,158 @@
+body {
+  background-color: white; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 40px; }
+
+h2 {
+  font-size: 20px; }
+
+h2, h1 {
+  font-family: "Antic Slab", serif; }
+
+.row {
+  display: flex;
+  width: 100; }
+  .row::after {
+    display: block;
+    clear: both;
+    content: ""; }
+
+.col-1 {
+  width: 8.33%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-12 {
+  width: 100%; }
+
+.parent-element, .child-element {
+  width: 100px;
+  height: 100px;
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3); }
+
+.child-element {
+  height: 20px;
+  position: absolute; }
+
+div.intro {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; }
+  div.intro div.row.welcome {
+    background-color: #007FB0;
+    padding: 150px 0; }
+    div.intro div.row.welcome h2 {
+      color: #efe4bc; }
+    div.intro div.row.welcome h1 {
+      color: #FFFED0; }
+      div.intro div.row.welcome h1 span.toStyle {
+        color: white; }
+
+div.images {
+  display: block;
+  box-sizing: border-box; }
+  div.images div.row {
+    height: 200px; }
+    div.images div.row div.main {
+      position: relative;
+      animation: movingDown 0.6s;
+      border: 1px solid white;
+      background: white;
+      background: linear-gradient(90deg, #d2d2d2 0%, #fffed0 100%); }
+      div.images div.row div.main:hover {
+        animation: moving 0.6s;
+        box-shadow: 0 10px 0px 1px #005F60;
+        bottom: 10px;
+        cursor: pointer; }
+      div.images div.row div.main .icon {
+        padding-top: 50px;
+        text-align: center; }
+      div.images div.row div.main .iconAlbum {
+        padding-top: 50%;
+        padding-left: 10%; }
+        div.images div.row div.main .iconAlbum h2 {
+          font-size: 14px;
+          color: #007FB0; }
+        div.images div.row div.main .iconAlbum h1 {
+          font-size: 20px;
+          color: #76631c; }
+
+@keyframes moving {
+  0% {
+    bottom: 0;
+    box-shadow: 0 0 0px 1px #005F60; }
+  100% {
+    bottom: 10px;
+    box-shadow: 0 10px 0px 1px #005F60; } }
+@keyframes movingDown {
+  0% {
+    bottom: 10px;
+    box-shadow: 0 10px 0px 1px #005F60; }
+  100% {
+    bottom: 0;
+    box-shadow: 0 0 0px 1px #005F60; } }
+div.navbar {
+  background-color: white;
+  overflow: hidden; }
+  div.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px 10px 40px; }
+    div.navbar ul li.name {
+      flex-grow: 18; }
+    div.navbar ul li.about {
+      flex-grow: 1; }
+    div.navbar ul li.contacts {
+      flex-grow: 1; }
+    div.navbar ul li a {
+      box-sizing: border-box;
+      font-family: "Homenaje", sans-serif;
+      color: #00a4e3;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-botom: 1px solid transparent; }
+      div.navbar ul li a.non {
+        color: #005F60;
+        font-size: 20px; }
+      div.navbar ul li a:hover:not(.non) {
+        border-bottom: 1px solid #005F60;
+        color: #005F60;
+        transition: 0.2s; }
+
+/*# sourceMappingURL=app.css.map */
