@@ -3,23 +3,27 @@ body {
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 h1 {
-  font-size: 40px; }
+  font-size: 40rm;
+  min-height: 40rm; }
 
 h2 {
-  font-size: 20px; }
+  font-size: 20px;
+  min-height: 20px; }
 
 h3 {
-  font-size: 14px; }
+  font-size: 14px;
+  min-height: 14px; }
 
 h3, h2, h1 {
   font-family: "Antic Slab", serif; }
 
 .row {
   display: flex;
-  width: 100; }
+  width: 100%; }
   .row::after {
     display: block;
     clear: both;
@@ -73,13 +77,11 @@ h3, h2, h1 {
 div.intro {
   display: block;
   width: 100%;
-  box-sizing: border-box;
   overflow: hidden; }
   div.intro div.row.welcome {
-    background-color: #005F60;
-    padding: 50px 0; }
+    background-color: #005F60; }
     div.intro div.row.welcome div.introduce {
-      padding: 60px 0 30px; }
+      padding: 120px 0; }
       div.intro div.row.welcome div.introduce h2 {
         color: #FFFED0; }
       div.intro div.row.welcome div.introduce h1 {
@@ -89,9 +91,36 @@ div.intro {
       div.intro div.row.welcome div.introduce h3 {
         color: darker(#007FB0, 10%);
         line-height: 1.3; }
-    div.intro div.row.welcome img.introPic {
-      box-shadow: 3px 3px 7px 5px rgba(0, 0, 0, 0.4); }
+    div.intro div.row.welcome div.sample {
+      position: relative; }
+      div.intro div.row.welcome div.sample img.introPic {
+        position: absolute;
+        right: -100px;
+        top: 30px;
+        box-shadow: 3px 3px 7px 5px rgba(0, 0, 0, 0.4); }
 
+@media screen and (max-width: 618px) {
+  div.intro {
+    width: 100%; }
+    div.intro div.row.welcome {
+      display: block;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+      width: 100%; }
+      div.intro div.row.welcome div.introduce {
+        padding: 0;
+        width: 100%; }
+        div.intro div.row.welcome div.introduce h1, div.intro div.row.welcome div.introduce h2, div.intro div.row.welcome div.introduce h3 {
+          padding: 20px 20px 0px; }
+      div.intro div.row.welcome div.sample {
+        position: static;
+        display: block;
+        padding: 20px;
+        height: 30px;
+        width: 100vw; }
+        div.intro div.row.welcome div.sample img.introPic {
+          display: none; } }
 div.images {
   display: block;
   box-sizing: border-box; }
@@ -110,18 +139,22 @@ div.images {
         cursor: pointer; }
       div.images div.row div.main a {
         text-decoration: none; }
-        div.images div.row div.main a .icon {
-          padding-top: 50px;
-          text-align: center; }
-        div.images div.row div.main a .iconAlbum {
-          padding-top: 50%;
-          padding-left: 10%; }
-          div.images div.row div.main a .iconAlbum h2 {
-            font-size: 14px;
-            color: #009193; }
-          div.images div.row div.main a .iconAlbum h1 {
-            font-size: 20px;
-            color: #241e08; }
+        div.images div.row div.main a div.col-7, div.images div.row div.main a div.col-5 {
+          overflow: hidden; }
+          div.images div.row div.main a div.col-7 img, div.images div.row div.main a div.col-5 img {
+            text-align: center;
+            position: absolute;
+            top: 20%; }
+          div.images div.row div.main a div.col-7 .iconAlbum, div.images div.row div.main a div.col-5 .iconAlbum {
+            position: absolute;
+            bottom: 20px;
+            left: 20px; }
+            div.images div.row div.main a div.col-7 .iconAlbum h2, div.images div.row div.main a div.col-5 .iconAlbum h2 {
+              font-size: 14px;
+              color: #009193; }
+            div.images div.row div.main a div.col-7 .iconAlbum h1, div.images div.row div.main a div.col-5 .iconAlbum h1 {
+              font-size: 20px;
+              color: #241e08; }
 
 @keyframes moving {
   0% {
@@ -137,6 +170,13 @@ div.images {
   100% {
     bottom: 0;
     box-shadow: 0 0 7px 1px #005F60; } }
+@media screen and (max-width: 618px) {
+  div.images div.row.main {
+    display: inline-block;
+    width: 100vw; }
+    div.images div.row.main div.col-4 {
+      display: block;
+      width: 100%; } }
 nav {
   width: 100%; }
   nav div.navbar {
@@ -168,5 +208,9 @@ nav {
           border-bottom: 1px solid #36312A;
           color: #36312A;
           transition: 0.2s; }
+
+@media screen and (max-width: 618px) {
+  nav div.navbar ul {
+    padding: 10px; } }
 
 /*# sourceMappingURL=app.css.map */

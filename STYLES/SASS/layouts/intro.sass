@@ -1,13 +1,11 @@
 div.intro
     display : block
     width : 100%
-    box-sizing: border-box
     overflow: hidden
     div.row.welcome
         background-color : $base-color-five
-        padding : 50px 0
         div.introduce
-            padding : 60px 0 30px
+            padding : 120px 0
             h2
                 color : $base-color-two
             h1
@@ -15,8 +13,35 @@ div.intro
                 span.toStyle
                     color : white
             h3
-
                 color : darker($base-color-three, 10%)
                 line-height: 1.3
-        img.introPic
-            box-shadow: 3px 3px 7px 5px rgba(0, 0, 0, 0.4)
+        div.sample
+            position : relative
+            img.introPic
+                position : absolute
+                right : -100px
+                top : 30px
+                box-shadow: 3px 3px 7px 5px rgba(0, 0, 0, 0.4)
+
+@media screen and (max-width : 618px)
+    div.intro
+        width : 100%
+        div.row.welcome
+            display : block
+            padding : 0
+            margin : 0
+            justify-content: center
+            width : 100%
+            div.introduce
+                padding : 0
+                width : 100%
+                h1, h2, h3
+                    padding : 20px 20px 0px
+            div.sample
+                position : static
+                display: block
+                padding : 20px
+                height : 30px
+                width : 100vw
+                img.introPic
+                    display : none
