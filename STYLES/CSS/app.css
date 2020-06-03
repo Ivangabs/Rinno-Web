@@ -11,7 +11,10 @@ h1 {
 h2 {
   font-size: 20px; }
 
-h2, h1 {
+h3 {
+  font-size: 14px; }
+
+h3, h2, h1 {
   font-family: "Antic Slab", serif; }
 
 .row {
@@ -74,13 +77,20 @@ div.intro {
   overflow: hidden; }
   div.intro div.row.welcome {
     background-color: #005F60;
-    padding: 150px 0; }
-    div.intro div.row.welcome h2 {
-      color: #FFFED0; }
-    div.intro div.row.welcome h1 {
-      color: #d6bb55; }
-      div.intro div.row.welcome h1 span.toStyle {
-        color: white; }
+    padding: 50px 0; }
+    div.intro div.row.welcome div.introduce {
+      padding: 60px 0 30px; }
+      div.intro div.row.welcome div.introduce h2 {
+        color: #FFFED0; }
+      div.intro div.row.welcome div.introduce h1 {
+        color: #d6bb55; }
+        div.intro div.row.welcome div.introduce h1 span.toStyle {
+          color: white; }
+      div.intro div.row.welcome div.introduce h3 {
+        color: darker(#007FB0, 10%);
+        line-height: 1.3; }
+    div.intro div.row.welcome img.introPic {
+      box-shadow: 3px 3px 7px 5px rgba(0, 0, 0, 0.4); }
 
 div.images {
   display: block;
@@ -98,18 +108,20 @@ div.images {
         box-shadow: 0 10px 7px 1px #005F60;
         bottom: 10px;
         cursor: pointer; }
-      div.images div.row div.main .icon {
-        padding-top: 50px;
-        text-align: center; }
-      div.images div.row div.main .iconAlbum {
-        padding-top: 50%;
-        padding-left: 10%; }
-        div.images div.row div.main .iconAlbum h2 {
-          font-size: 14px;
-          color: #009193; }
-        div.images div.row div.main .iconAlbum h1 {
-          font-size: 20px;
-          color: #241e08; }
+      div.images div.row div.main a {
+        text-decoration: none; }
+        div.images div.row div.main a .icon {
+          padding-top: 50px;
+          text-align: center; }
+        div.images div.row div.main a .iconAlbum {
+          padding-top: 50%;
+          padding-left: 10%; }
+          div.images div.row div.main a .iconAlbum h2 {
+            font-size: 14px;
+            color: #009193; }
+          div.images div.row div.main a .iconAlbum h1 {
+            font-size: 20px;
+            color: #241e08; }
 
 @keyframes moving {
   0% {
@@ -125,34 +137,36 @@ div.images {
   100% {
     bottom: 0;
     box-shadow: 0 0 7px 1px #005F60; } }
-div.navbar {
-  background-color: white;
-  overflow: hidden; }
-  div.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0px 10px 40px; }
-    div.navbar ul li.name {
-      flex-grow: 18; }
-    div.navbar ul li.about {
-      flex-grow: 1; }
-    div.navbar ul li.contacts {
-      flex-grow: 1; }
-    div.navbar ul li a {
-      box-sizing: border-box;
-      font-family: "Homenaje", sans-serif;
-      color: #00a4e3;
-      text-decoration: none;
-      text-transform: uppercase;
-      border-botom: 1px solid transparent; }
-      div.navbar ul li a.non {
-        color: #005F60;
-        font-size: 20px; }
-      div.navbar ul li a:hover:not(.non) {
-        border-bottom: 1px solid #005F60;
-        color: #005F60;
-        transition: 0.2s; }
+nav {
+  width: 100%; }
+  nav div.navbar {
+    background-color: white;
+    overflow: hidden; }
+    nav div.navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0px 10px 40px; }
+      nav div.navbar ul li.name {
+        flex-grow: 18; }
+      nav div.navbar ul li.about {
+        flex-grow: 1; }
+      nav div.navbar ul li.contacts {
+        flex-grow: 1; }
+      nav div.navbar ul li a {
+        box-sizing: border-box;
+        font-family: "Homenaje", sans-serif;
+        color: #8c7f6d;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-botom: 1px solid transparent; }
+        nav div.navbar ul li a.non {
+          color: #36312A;
+          font-size: 20px; }
+        nav div.navbar ul li a:hover:not(.non) {
+          border-bottom: 1px solid #36312A;
+          color: #36312A;
+          transition: 0.2s; }
 
 /*# sourceMappingURL=app.css.map */

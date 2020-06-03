@@ -1,30 +1,32 @@
-div.navbar
-    background-color: $base-color-white
-    overflow: hidden
-    ul
-        list-style: none
-        display : flex
-        justify-content: space-around
-        align-items: center
-        padding : 10px 0px 10px 40px
-        li
-            &.name
-                flex-grow : 18
-            &.about
-                flex-grow : 1
-            &.contacts
-                flex-grow : 1
-            a
-                box-sizing: border-box
-                font-family: 'Homenaje', sans-serif
-                color : lighten($base-color-three, 10%)
-                text-decoration: none
-                text-transform: uppercase
-                border-botom : 1px solid transparent
-                &.non
-                    color : $base-color-five
-                    font-size : 20px
-                &:hover:not(.non)
-                    border-bottom : 1px solid $base-color-five
-                    color : $base-color-five
-                    transition: 0.2s
+nav
+    width : 100%
+    div.navbar
+        background-color: $base-color-white
+        overflow: hidden
+        ul
+            list-style: none
+            display : flex
+            justify-content: space-around
+            align-items: center
+            padding : 10px 0px 10px 40px
+            li
+                &.name
+                    flex-grow : 18
+                &.about
+                    flex-grow : 1
+                &.contacts
+                    flex-grow : 1
+                a
+                    box-sizing: border-box
+                    font-family: 'Homenaje', sans-serif
+                    color : lighten($base-color-black, 30%)
+                    text-decoration: none
+                    text-transform: uppercase
+                    border-botom : 1px solid transparent
+                    &.non
+                        color : $base-color-black
+                        font-size : 20px
+                    &:hover:not(.non)
+                        border-bottom : 1px solid $base-color-black
+                        color : $base-color-black
+                        transition: 0.2s
