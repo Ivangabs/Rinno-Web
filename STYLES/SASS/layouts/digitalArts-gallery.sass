@@ -1,0 +1,72 @@
+
+div.DA-gallery
+    overflow : hidden
+    background-color: $base-color-one
+    div.row
+        justify-content: center
+        padding-right: 30px
+        div.wImage
+            margin : 30px 40px
+            display : block
+            div.img-container
+                transition : 0.5s
+                height : 300px
+                display : inline-flex
+                position : relative
+
+                -webkit-box-shadow: 7px 7px 7px -4px rgba(0,0,0,0.75)
+                -moz-box-shadow: 7px 7px 7px -4px rgba(0,0,0,0.75)
+                box-shadow: 7px 7px 7px -4px rgba(0,0,0,0.75)
+
+                border-radius: 7px 7px 7px 7px
+                -moz-border-radius: 7px 7px 7px 7px
+                -webkit-border-radius: 7px 7px 7px 7px
+
+                border : 1px solid black
+                img
+                    transition : 0.5s
+                    height : 100%
+                    display : inline-table
+                    margin : auto
+                    background-color : white
+
+                div.description
+                    position: absolute
+                    bottom : 0
+                    display : none
+                    width : 100%
+
+
+                &:hover
+                    cursor: pointer
+                    transition : 0.5s
+                    transform : scale(1.1)
+                    background-color : gray
+                    img
+                        filter : brightness(50%)
+                    div.description
+                        background-color: rgba(0, 0, 0, 0.3)
+                        display : block
+                        height : 100px
+                        h1
+                            margin-left: 20px
+                            color : $base-color-four
+                        h3
+                            margin-left : 20px
+                            color : $base-color-one
+
+@media screen and (max-width : 618px)
+    div.DA-gallery
+        div.row
+            display : block
+            padding : 0
+            div.wImage
+                margin : 0
+                text-align: center
+                display : block
+                width : 100%
+                padding : 30px
+
+            div.img-container
+                &:hover
+                    text-align : left
