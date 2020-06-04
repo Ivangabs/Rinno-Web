@@ -260,13 +260,19 @@ div.DA-gallery {
     display: block;
     padding: 0; }
     div.DA-gallery div.row div.wImage {
+      display: block;
       margin: 0;
       text-align: center;
-      display: block;
       width: 100%;
       padding: 30px; }
-    div.DA-gallery div.row div.img-container:hover {
-      text-align: left; } }
+    div.DA-gallery div.row div.img-container {
+      width: auto; }
+      div.DA-gallery div.row div.img-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; }
+      div.DA-gallery div.row div.img-container:hover {
+        text-align: left; } }
 nav {
   width: 100%; }
   nav div.navbar {
